@@ -1,0 +1,46 @@
+﻿@page
+@model LandingPageRazor.IndexModel
+
+
+
+
+
+<div class="container row p-0 m-0" style="margin:1em!important;">
+    <div class="col-9">
+        <h2 class="text-info">Contacts List</h2>
+    </div>    
+    <div class="col-3">
+        <a class="btn btn-info form-control">Create Contact</a>
+    </div>
+
+    <div class="col-12 border p-3 mt-3">
+        <form method="post">
+            <!-- check if any entries exist in the contact db. -->
+            @if(Model.Contacts.Count() >0)
+            {
+                <!-- display table -->
+                <table class="table table-striped border">
+                        <tr class="table-secondary">
+                            <!-- table heading for contacts-->
+                            <th>
+                                <label asp-for="Contacts.FirstOrDefault().EmailAddress"></label>
+                            </th>
+                        </tr>
+
+                    @foreach(var item in Model.Contacts)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(m => item.EmailAddress);
+                            </td>
+                        </tr>
+                    }
+                </table>
+            }
+            else
+            {
+                <p>no contacts in the database</p>
+            }
+        </form>
+    </div>
+</div>

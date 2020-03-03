@@ -1,0 +1,59 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+    <div class="container-fluid container1">
+        <!-- two columns on page-->
+        <div class="inner">
+            <div class="left">
+                <img src="/images/Component.svg" alt="Curries Print Centre Logo" class="logo">
+
+                <div class="content">
+                    <h1>We're almost there</h1>
+
+                    <p>
+                        We've been working on our new site and
+                        we’ll be live in a few weeks. If you want us
+                        to keep you updated fill in the form with your email.
+                        Or if you have any  enquiries,
+                        please contact us on 01506 854033 
+                        .
+                    </p>
+                    <br>
+                    <!-- social media links-->
+                    <div class="text-center">
+                        
+                        <div class="social">
+                            <a href="https://twitter.com/curriesprint?lang=de"><img src="/images/twitter.svg" alt=""></a>
+                            <a href="https://www.facebook.com/curriesprint/"> <img src="/images/facebook.svg" alt="facebook image"></a>
+
+                            <a href="https://www.linkedin.com/in/graeme-currie-09a8baa/"><img src="/images/linkedin.svg" alt="linkedin image"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right">
+                <p>Get notified when the new site is ready</p>
+
+                <input type="text" name="email" id="email" placeholder="your email">
+                <button>Notify me</button>
+
+                <p>see the contacts list</p>
+                <a asp-area="" asp-page="/ContactList/Index">Contact</a>
+
+                <footer class="mastfoot mt-auto">
+                    <div>
+                        <p>Copyright © 2020 <a href="/http://curriesprint.co.uk/">Curries Print Centre</a>, by <a href="#">ph</a>.</p>
+                    </div>
+                </footer>
+
+
+            </div>
+
+        </div>
+
+    </div>
