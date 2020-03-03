@@ -26,7 +26,7 @@
                                 <label asp-for="Contacts.FirstOrDefault().EmailAddress"></label>
                             </th>
                         </tr>
-
+                    <!-- for each loop to display all the contacts email addresses-->
                     @foreach(var item in Model.Contacts)
                     {
                         <tr>
